@@ -5,8 +5,8 @@ import headerStyles from '../styles/components/header.module.scss'
 const Header = () => {
   return (
     <header>
-      <h1>CC</h1>
       <nav>
+        <h1><Link to="/">Cristiano</Link></h1>
         <ul className={headerStyles.nav__items}>
           <li>
             <Link className={headerStyles.nav__item} activeClassName={headerStyles.activeNavItem} to="/">Home</Link>

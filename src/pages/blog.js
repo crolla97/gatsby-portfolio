@@ -24,7 +24,7 @@ const BlogPage = () => {
   `)
   return (
     <Layout>
-      <main>
+      <main className={blogStyles.main}>
         <div className={blogStyles.container}>
           <h1>Blog</h1>
           <ol >

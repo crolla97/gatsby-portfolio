@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
 }
 
 .content {
@@ -15,4 +16,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.childContainer {
+  margin-top: 60px;
 }

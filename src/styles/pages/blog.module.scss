@@ -1,5 +1,5 @@
-main {
-  width: 100vw;
+.main {
+  width: 100%;
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -10,11 +10,6 @@ main {
   width: 80%;
   margin: 0 auto;
   margin-top: 2rem;
-}
-
-ol {
-  list-style-position: outside;
-  list-style-image: none;
 }
 
 .blog__item {
