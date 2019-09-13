@@ -20,13 +20,44 @@ const HomePage = () => {
           <p className={homeStyles.role}>FRONT-END DEVELOPER</p>
           <h1 className={homeStyles.hero}>I create <span className={homeStyles.highlight}>modern</span> websites using <span className={homeStyles.highlight}>modern</span> technology.</h1>
           <div className={homeStyles.landingBtn}>
-            <p><Link to='/projects'>My projects</Link></p>
+            <div>
+              <Link to='/projects'>
+                My projects
+                <div className={homeStyles.btnArrow}></div>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
+        
       <section className={homeStyles.about}>
         <div className={homeStyles.arrowDown}></div>
-
+        <div className={homeStyles.aboutContainer}>
+          <div className={homeStyles.aboutTop}>
+            <div className={homeStyles.aboutTopLeft}>
+              <h2>What I can do</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh cras pulvinar mattis nunc sed blandit libero. Duis ultricies lacus sed turpis tincidunt id aliquet. Porttitor massa id neque aliquam vestibulum morbi blandit.</p>
+            </div>
+            <div className={homeStyles.aboutTopRight}>
+              <ul>
+                <p>DESIGN</p>
+                <li>Prototyping</li>
+                <li>Web design</li>
+              </ul>
+              <ul>
+              <p>DEVELOPMENT</p>
+              <li>Web developement</li>              
+              </ul>
+            </div>
+          </div>
+          <div className={homeStyles.aboutBottom}>
+            <h3>I also blog a little...</h3>
+            <div className={homeStyles.blogLink}>
+              <h4>recent post</h4>
+              <Link to="/blog/learning-gatsby">Learning Gatsby</Link>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className={homeStyles.projects}>
@@ -34,7 +65,10 @@ const HomePage = () => {
           <div className={homeStyles.projects__headerBlock}>
             <h1>Recent work</h1>
             <div className={homeStyles.landingBtn}>
-              <p><Link to='/projects'>View all.</Link></p>
+              <Link to='/projects'>
+                View all.
+                <div className={homeStyles.btnArrow}></div>
+              </Link>
             </div>
           </div>
           <div className={homeStyles.rwCases}>
@@ -51,7 +85,7 @@ const HomePage = () => {
                   <li>Netlify</li>
                 </ul>
                 <div className={homeStyles.rwCaseVcBtn}>
-                  <p><Link>View Code</Link></p>
+                  <a href="#">View Code</a>
                 </div>
               </div>
               <div>
@@ -71,18 +105,19 @@ const HomePage = () => {
               <li>Netlify</li>
             </ul>
             <div className={homeStyles.rwCaseVcBtn}>
-              <p><a>View Code</a></p>
+              <a href="#">View Code</a>
+              <div></div>
             </div>
           </div>
             </div>
           </div>
         </div>
       </section>
-      <section>
+      <section className={homeStyles.contact}>
         <div>
-          <p>Like what you see?</p>
-          <div>
-            <p><a>Get in touch</a></p>
+          <h3>Like what you see?</h3>
+          <div className={homeStyles.contactBtn}>
+            <Link to="/contact">Come find me</Link>
           </div>
         </div>
       </section>
