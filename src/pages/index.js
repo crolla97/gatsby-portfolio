@@ -53,7 +53,7 @@ const HomePage = () => {
           <div className={homeStyles.aboutBottom}>
             <h3>I also blog a little...</h3>
             <div className={homeStyles.blogLink}>
-              <h4>recent post</h4>
+              <h4>recent post.</h4>
               <Link to="/blog/learning-gatsby">Learning Gatsby</Link>
             </div>
           </div>
@@ -63,7 +63,7 @@ const HomePage = () => {
       <section className={homeStyles.projects}>
         <div className={homeStyles.projectsWrapper}>
           <div className={homeStyles.projects__headerBlock}>
-            <h1>Recent work</h1>
+            <h1>recent work.</h1>
             <div className={homeStyles.landingBtn}>
               <Link to='/projects'>
                 View all.
@@ -88,27 +88,29 @@ const HomePage = () => {
                   <a href="#">View Code</a>
                 </div>
               </div>
-              <div>
-  
+              <div className={homeStyles.projectImage}>
+                <img src={require('../images/laptop.png')} alt="laptop"/>
               </div>
             </div>
             <div className={homeStyles.rwCase}>
-            <div className={homeStyles.rwCaseStart}>
-            <h3>Web development</h3>
-            <h2>Personal <span className={homeStyles.secondChildSpan}>Porfolio</span> and Blog</h2>
-            <p>Technologies used:</p>
-            <ul>
-              <li>React</li>
-              <li>Gatsby</li>
-              <li>CSS/SCSS</li>
-              <li>Graphql</li>
-              <li>Netlify</li>
-            </ul>
-            <div className={homeStyles.rwCaseVcBtn}>
-              <a href="#">View Code</a>
-              <div></div>
-            </div>
-          </div>
+              <div className={homeStyles.rwCaseStart}>
+                <h3>Web development</h3>
+                <h2>Personal <span className={homeStyles.secondChildSpan}>Porfolio</span> and Blog</h2>
+                <p>Technologies used:</p>
+                <ul>
+                  <li>React</li>
+                  <li>Gatsby</li>
+                  <li>CSS/SCSS</li>
+                  <li>Graphql</li>
+                  <li>Netlify</li>
+                </ul>
+                <div className={homeStyles.rwCaseVcBtn}>
+                  <a href="#">View Code</a>
+                </div>
+              </div>
+              <div className={homeStyles.projectImage}>
+                <img src={require('../images/laptop.png')} alt="laptop"/>
+              </div>
             </div>
           </div>
         </div>

@@ -1,17 +1,23 @@
+@import '../partials';
+
 .container {
   width: 80%;
   margin: 0 auto 50px;
   text-align: center;
 }
 
+/***************
+* LANDING PAGE *
+***************/
+
 .hero {
-  font-size: 56px;
+  font-size: 60px;
   margin-bottom: 1.5rem;
   font-weight: 700;
 }
 
 .landing {
-  // height: 80vh;
+  height: 80vh;
   min-height: 480px;
   width: 100%;
   display: flex;
@@ -59,19 +65,24 @@
 }
 
 .highlight {
-  color: #bb6a3b;
+  color: $secondary-color;
 }
 
 .role {
-  color: #999999;
+  color: $light-grey;
   margin-bottom: 20px;
 }
+
+/****************
+* ABOUT SECTION *
+****************/
 
 .about {
   position: relative;
   background-color: #000;
-  height: 500px;
+  // height: 500px;
   width: 80%;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -79,7 +90,7 @@
   position: absolute;
   width: 80px;
   height: 80px;
-  background: #bb6a3b url(../../images/right-arrow.svg) center center no-repeat;
+  background: $secondary-color url(../../images/right-arrow.svg) center center no-repeat;
   left: 50%;
   transform: translate(-50%, 0) rotate(90deg);
   top: -40px;
@@ -100,7 +111,7 @@
   justify-content: space-between;
 }
 
-.about-top-left{
+.about-top-left {
   width: 50%;
   margin: 0 auto;
   padding: 3rem 4rem;
@@ -113,7 +124,7 @@
   p {
     font-size: 0.9rem;
     line-height: 1.5rem;
-    color:#777777;
+    color: $grey;
   }
 }
 
@@ -128,7 +139,7 @@
     list-style: none;
 
     p {
-      color: #bb6a3b;
+      color: $secondary-color;
       margin-bottom: 10px;
       font-weight: bold;
       font-size: 0.9rem;
@@ -148,6 +159,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 
   h3 {
     margin-right: 60px;
@@ -159,12 +171,12 @@
   h4 {
     margin-bottom: 5px;
     font-size: 0.9rem;
-    color: #bb6a3b;
+    color: $secondary-color;
   }
 
   a {
     font-size: 1.2rem;
-    color: #777777;
+    color: $grey;
     transition: 0.15s ease-in-out;
   }
 
@@ -172,6 +184,10 @@
     color: #fff;
   }
 }
+
+/*******************
+* PROJECTS SECTION *
+*******************/
 
 .projects {
   position: relative;
@@ -208,10 +224,24 @@
 
 .rw-case {
   width: calc(50% - 20px);
-  background-color: #e9e9e9;
+  background-color: $offwhite;
   position: relative;
   padding: 20px;
   transition: 0.3s ease-out;
+  display: flex;
+  overflow: hidden;
+
+  .project-image {
+    width: 40%;
+    position: relative;
+
+    img {
+      width: 340px;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
 }
 
 .rw-case:hover {
@@ -234,7 +264,7 @@
 
   h3 {
     margin: 10px 0;
-    color: #777777;
+    color: $grey;
     font-size: 14px;
   }
 
@@ -251,7 +281,7 @@
     list-style-type: none;
     margin-right: 5px;
     font-size: .8rem;
-    color: #666666;
+    color: $dark-grey;
   }
 }
 
@@ -272,12 +302,16 @@
   margin: 40px 0 10px;
   
   a {
-    color: #666666;
+    color: $dark-grey;
     font-size: 20px;
   }
 
   
 }
+
+/******************
+* CONTACT SECTION *
+******************/
 
 .contact {
   width: 80%;
@@ -292,7 +326,7 @@
   }
 
   .contact-btn {
-    border: 1px solid #999999;
+    border: 1px solid $light-grey;
     border-radius: 60px;
     display: inline-flex;
     justify-content: center;
@@ -304,6 +338,188 @@
 
     a:hover {
       transform: scale(1.1);
+    }
+  }
+}
+
+/****************
+* MEDIA QUERIES *
+****************/
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  //CSS
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  //CSS
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  //CSS
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  //CSS
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  // CSS
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /**********
+  * LANDING *
+  ***********/
+
+  .container {
+    width: 90%;
+    margin: 160px auto;
+  }
+
+  .hero {
+    font-size: 36px;
+  }
+
+  .role {
+    font-size: .8rem;
+    margin: 10px;
+  }
+
+  /********
+  * ABOUT *
+  ********/
+
+  .about {
+    width: 100%;
+  }
+
+  .about-container {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .about-top {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+  .about-top-left {
+    width: 100%;
+    padding: 3rem 2rem; 
+  }
+
+  .about-top-right {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .about-bottom {
+    margin: 50px 30px;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+      font-size: 1.1rem;
+      margin: 0 0 20px;
+    }
+  }
+  
+  /**********
+  * PROJECT *
+  **********/
+
+  .projects-wrapper {
+    padding: 0;
+    align-items: center;
+  }
+
+  .projects__header-block {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    h1 {
+      padding: 0 0 30px;
+    }
+  }
+
+  .rw-cases {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .rw-case {
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0;
+
+    h2 {
+      font-size: 25px;
+      margin: 30px 0 0;
+    }
+
+    .project-image {
+     
+      img {
+        width: 200px;
+      }
+    }
+  }
+
+  .rw-case:first-child {
+    margin-right: 0;
+  }
+
+  .rw-case-start {
+
+    p {
+      display: none;
+    }
+    ul {
+      display: none;
     }
   }
 }
