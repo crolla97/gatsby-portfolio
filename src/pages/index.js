@@ -31,7 +31,9 @@ const HomePage = () => {
       </section>
         
       <section className={homeStyles.about}>
-        <div className={homeStyles.arrowDown}></div>
+        <div className={homeStyles.arrowDown}>
+          <img src={require('../images/right-arrow.svg')} alt="laptop"/>
+        </div>
         <div className={homeStyles.aboutContainer}>
           <div className={homeStyles.aboutTop}>
             <div className={homeStyles.aboutTopLeft}>
@@ -63,7 +65,7 @@ const HomePage = () => {
       <section className={homeStyles.projects}>
         <div className={homeStyles.projectsWrapper}>
           <div className={homeStyles.projects__headerBlock}>
-            <h1>recent work.</h1>
+            <h1>Featured work.</h1>
             <div className={homeStyles.landingBtn}>
               <Link to='/projects'>
                 View all.
@@ -85,7 +87,7 @@ const HomePage = () => {
                   <li>Netlify</li>
                 </ul>
                 <div className={homeStyles.rwCaseVcBtn}>
-                  <a href="#">View Code</a>
+                  <a href="/">View Code</a>
                 </div>
               </div>
               <div className={homeStyles.projectImage}>
@@ -105,7 +107,7 @@ const HomePage = () => {
                   <li>Netlify</li>
                 </ul>
                 <div className={homeStyles.rwCaseVcBtn}>
-                  <a href="#">View Code</a>
+                  <a href="/">View Code</a>
                 </div>
               </div>
               <div className={homeStyles.projectImage}>

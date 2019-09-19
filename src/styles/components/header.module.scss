@@ -1,25 +1,27 @@
+@import '../partials';
+
 header {
-  padding: 1rem 2rem;
+  padding: 3rem 1.5rem;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 60px;
-  background-color: #e9e9e9;
   z-index: 100;
-}
-
-nav {
-  display: flex;
-  height: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-h1 {
-  font-family: muli;
-  font-weight: 700;
+  
+  nav {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    a {
+      font-family: muli;
+      font-weight: 900;
+      color: #4e4e4e;
+    }
+  }
 }
 
 .nav__items {
@@ -43,4 +45,15 @@ h1 {
 
 .active-nav-item {
   color: #333333;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .nav__item {
+    display: none;
+  }
+
+  header {
+    // background-color: #e9e9e9;
+  }
 }

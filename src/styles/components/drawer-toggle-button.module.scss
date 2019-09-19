@@ -1,0 +1,29 @@
+@import '../partials';
+
+.toggle-button {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  justify-content: space-around;
+  height: 24px;
+  width: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 250;
+  right: 0;
+  top: 0;
+  margin: 2.2rem 1.5rem;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button__line {
+  width: 30px;
+  height: 2px;
+  background: $grey;
+}
