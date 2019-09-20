@@ -5,13 +5,16 @@ import homeStyles from '../styles/pages/homePage.module.scss'
 
 const HomePage = () => {
   const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          author
-        }
+  query {
+    markdownRemark(frontmatter:{ featured:{ eq: true } }) {
+      frontmatter {
+        title
+      }
+      fields {
+        slug
       }
     }
+  }
   `)
   return (
     <Layout>
@@ -56,7 +59,7 @@ const HomePage = () => {
             <h3>I also blog a little...</h3>
             <div className={homeStyles.blogLink}>
               <h4>recent post.</h4>
-              <Link to="/blog/learning-gatsby">Learning Gatsby</Link>
+              <Link to={`/blog/${data.markdownRemark.fields.slug}`}>{data.markdownRemark.frontmatter.title}</Link>
             </div>
           </div>
         </div>

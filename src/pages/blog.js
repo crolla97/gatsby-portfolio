@@ -6,22 +6,27 @@ import blogStyles from '../styles/pages/blog.module.scss'
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              title
-              date
-              description
-            }
-            fields {
-              slug
-            }
+  query {
+    allMarkdownRemark(
+      sort: {
+        fields: [frontmatter___date]
+        order: DESC
+      }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+            description
+          }
+          fields {
+            slug
           }
         }
       }
     }
+  }
   `)
   return (
     <Layout>

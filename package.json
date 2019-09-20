@@ -16,9 +16,11 @@
     "gatsby": "^2.15.14",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-sass": "^2.1.14",
+    "gatsby-remark-prismjs": "^3.3.14",
     "gatsby-source-filesystem": "^2.1.22",
     "gatsby-transformer-remark": "^2.6.22",
     "node-sass": "^4.12.0",
+    "prismjs": "^1.17.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "uuid": "^3.3.3"

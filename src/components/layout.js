@@ -37,20 +37,5 @@ class Layout extends Component {
   }
 }
 
-// const Layout = (props) =>{
-//   return (
-//     <div>
-//       <div className={layoutStyles.container}>
-//         <div className={layoutStyles.content}>
-//           <Header />
-//             <div className={layoutStyles.childContainer}>
-//               {props.children}
-//             </div>
-//         </div>
-//       </div>
-//         <Footer />
-//     </div>
-//   )
-// }
 
 export default Layout

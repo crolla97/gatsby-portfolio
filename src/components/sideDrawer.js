@@ -1,9 +1,23 @@
 import React from 'react'
 import drawerStyles from '../styles/components/side-drawer.module.scss'
 
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 
 const SideDrawer = (props) => {
+
+  const data = useStaticQuery(graphql`
+  query {
+    markdownRemark(frontmatter:{ featured:{ eq: true } }) {
+      frontmatter {
+        title
+      }
+      fields {
+        slug
+      }
+    }
+  }
+  `)
+
   let side = drawerStyles.sideDrawer;
   let open = drawerStyles.open;
   let drawerClasses = side;
@@ -24,7 +38,7 @@ const SideDrawer = (props) => {
       <div className={drawerStyles.recentWork}>
         <div className={drawerStyles.recentWorkContainer}>
           <h3>Recent Blog Post</h3>
-          <Link>Learning gatsby</Link>
+          <Link to={`/blog/${data.markdownRemark.fields.slug}`}>{data.markdownRemark.frontmatter.title}</Link>
         </div>
         <div className={drawerStyles.recentWorkContainer}>
           <h3>Recent Work</h3>
