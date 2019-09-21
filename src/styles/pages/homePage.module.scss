@@ -355,6 +355,7 @@ a {
     a {
       transition: 0.2s ease-out;
       padding: 20px 30px;
+      color: #000;
     }
 
     a:hover {
@@ -372,7 +373,7 @@ a {
   ##Screen = 1281px to higher resolution desktops
 */
 
-@media (min-width: 1281px) {
+@media only screen and (min-width: 1281px) {
   
   //CSS
   
@@ -383,7 +384,7 @@ a {
   ##Screen = B/w 1025px to 1280px
 */
 
-@media (min-width: 1025px) and (max-width: 1280px) {
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
   
   //CSS
   
@@ -394,7 +395,7 @@ a {
   ##Screen = B/w 768px to 1024px
 */
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   
   /**********
   * LANDING *
@@ -462,7 +463,7 @@ a {
   ##Screen = B/w 768px to 1024px
 */
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   
   //CSS
   
@@ -473,7 +474,7 @@ a {
   ##Screen = B/w 481px to 767px
 */
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   
   // CSS
   
@@ -484,7 +485,7 @@ a {
   ##Screen = B/w 320px to 479px
 */
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
   
   /**********
   * LANDING *

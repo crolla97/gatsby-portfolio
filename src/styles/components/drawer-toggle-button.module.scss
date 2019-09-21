@@ -27,3 +27,10 @@
   height: 2px;
   background: $grey;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .toggle-button {
+    margin: 1.4rem 1.5rem
+  }
+}

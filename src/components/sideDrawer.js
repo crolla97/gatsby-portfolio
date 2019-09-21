@@ -42,7 +42,7 @@ const SideDrawer = (props) => {
         </div>
         <div className={drawerStyles.recentWorkContainer}>
           <h3>Recent Work</h3>
-          <Link>Portfolio Website & Blog</Link>
+          <a href="/">Portfolio Website & Blog</a>
         </div>
       </div>
     </nav>

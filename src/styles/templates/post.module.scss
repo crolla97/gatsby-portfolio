@@ -1,7 +1,14 @@
-.wrapper {
+@import '../partials';
+
+article {
   width: 60%;
   margin: 0 auto;
   padding-top: 30px;
+
+  a {
+    color: $secondary-color;
+    font-weight: 700;
+  }
 
   div {
     padding: 30px 0;
@@ -18,10 +25,59 @@
   }
   h1 {
     font-size: 3rem;
-    padding-bottom: 20px;
+    padding: 40px 0 20px;
   }
   span {
     color: rgb(190, 80, 53);
     font-weight: 700;
+  }
+  
+  .blog-links {
+    padding-bottom: 50px;
+  
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0;
+  
+      li {
+        list-style-type: none;
+      }
+    }
+}
+
+}
+
+/****************
+* MEDIA QUERIES *
+****************/
+
+// Tablets Portrait
+@media (min-width: 768px) and (max-width: 1024px) {
+  article {
+    width: 70%;
+  }
+}
+
+// Phones Portrait
+@media (min-width: 320px) and (max-width: 480px) {
+  article {
+    width: 80%;
+
+    h1 {
+      font-size: 2rem;
+    }
+    div {
+
+      p {
+        font-size: .9rem;
+        line-height: 1.2rem;
+      }
+
+      code {
+        font-size: .9rem;
+      }
+    }
   }
 }

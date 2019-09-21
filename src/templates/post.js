@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import postStyles from '../styles/templates/post.module.scss'
 import '../styles/templates/prism.scss'
 
@@ -25,14 +25,33 @@ query (
 `
 
 const Blog = (props) => {
+  const { previous,next } = props.pageContext;
+
   return (
     <Layout>
       <main>
-        <div className={postStyles.wrapper}>
+        <article>
+          <Link to="/blog">← Blog</Link>
           <h1>{props.data.markdownRemark.frontmatter.title}</h1>
           <span>{props.data.markdownRemark.frontmatter.date}</span>
           <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}></div>
-        </div>
+          <nav className={postStyles.blogLinks}>
+            <ul>
+              <li>{previous && (
+                <Link to={`/blog/${previous.fields.slug}`} rel="prev">
+                  ← {previous.frontmatter.title}
+                </Link>
+                )}
+              </li>
+              <li>{next && (
+                <Link to={`/blog/${next.fields.slug}`} rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+                )}
+              </li>
+            </ul>
+          </nav>
+        </article>
       </main>
     </Layout>
   )
