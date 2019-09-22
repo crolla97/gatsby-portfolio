@@ -3,7 +3,7 @@
 .side-drawer {
   height: 100%;
   width: 100%;
-  background: #191A1E;
+  background: lighten(#191A1E, 2%);
   position: fixed;
   top: 0;
   left: 0;
@@ -32,10 +32,11 @@
   font-size: 2.6rem;
   padding: 20px 0;
   font-weight: 700;
+  transition: 0.2s ease-out;
 }
 
 .nav__item:hover {
-  color: #666666;
+  color: $grey;
 }
 
 .nav__item-active {
@@ -51,6 +52,10 @@
   a {
     color: white;
     font-size: 1.8rem;
+    transition: 0.2s ease-out;
+  }
+  a:hover {
+    color: $grey;
   }
 }
 

@@ -90,7 +90,7 @@ const HomePage = () => {
                   <li>Netlify</li>
                 </ul>
                 <div className={homeStyles.rwCaseVcBtn}>
-                  <a href="/">View Code</a>
+                  <a href="https://github.com/crolla97/gatsby-portfolio" target="_blank">View Code</a>
                 </div>
               </div>
               <div className={homeStyles.projectImage}>
@@ -110,7 +110,7 @@ const HomePage = () => {
                   <li>Netlify</li>
                 </ul>
                 <div className={homeStyles.rwCaseVcBtn}>
-                  <a href="/">View Code</a>
+                  <a href="https://github.com/crolla97/gatsby-portfolio" target="_blank">View Code</a>
                 </div>
               </div>
               <div className={homeStyles.projectImage}>

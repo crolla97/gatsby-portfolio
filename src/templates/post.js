@@ -37,14 +37,16 @@ const Blog = (props) => {
           <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}></div>
           <nav className={postStyles.blogLinks}>
             <ul>
-              <li>{previous && (
+            <li>{previous && (
                 <Link to={`/blog/${previous.fields.slug}`} rel="prev">
+                  <span>Previous</span>
                   ← {previous.frontmatter.title}
                 </Link>
                 )}
               </li>
               <li>{next && (
                 <Link to={`/blog/${next.fields.slug}`} rel="next">
+                  <span>Next</span>
                   {next.frontmatter.title} →
                 </Link>
                 )}
