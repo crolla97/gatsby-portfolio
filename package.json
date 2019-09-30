@@ -15,6 +15,7 @@
   "dependencies": {
     "gatsby": "^2.15.14",
     "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-react-helmet": "^3.1.10",
     "gatsby-plugin-sass": "^2.1.14",
     "gatsby-remark-prismjs": "^3.3.14",
     "gatsby-source-filesystem": "^2.1.22",
@@ -23,6 +24,7 @@
     "prismjs": "^1.17.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
     "uuid": "^3.3.3"
   },
   "devDependencies": {

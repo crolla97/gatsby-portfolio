@@ -9,6 +9,7 @@ module.exports = {
     author: 'Cristiano Crolla'
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     'gatsby-plugin-sass',
     {
       resolve: `gatsby-source-filesystem`,
